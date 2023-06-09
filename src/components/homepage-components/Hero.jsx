@@ -160,7 +160,7 @@ const Title = styled.div`
     font-weight: black;
     color: black;
     margin-bottom: 40px;
-    font-family: 'Big Shoulders Display', cursive;
+    font-family: ${props => props.theme.fontBold}, cursive;
 
     @media (min-width: 768px) {
         font-size: 70px;
@@ -177,25 +177,25 @@ const InfoContainer = styled.div`
 const Subtitle = styled.div`
     font-size: 18px;
     font-weight: light;
-    color: #444444;
+    color: ${props => props.theme.darkGray};
     margin-bottom: 40px;
-    font-family: 'Outfit', sans-serif;
+    font-family: ${props => props.theme.fontLight}, sans-serif;
     max-width: 343px;
 `;
 
 const Button = styled.button`
-    background-color: #151515;
+    background-color: ${props => props.theme.almostBlack};
     font-size: 20px;
     font-weight: extrabold;
     letter-spacing: 3.64px;
     text-transform: uppercase;
     border: none;
-    color: #fff;
+    color: ${props => props.theme.white};
     width: 204px;
     height: 72px;
     position: relative;
     cursor: pointer;
-    font-family: 'Big Shoulders Display', cursive;
+    font-family: ${props => props.theme.fontBold}, cursive;
     transition: all .4s ease;
 
 
@@ -208,7 +208,7 @@ const Button = styled.button`
         position: absolute;
         width: 25%;
         height: 100%;
-        background-color: #D5966C;
+        background-color: ${props => props.theme.gold};
         top: 0;
         right: -25%;
         display: flex;
@@ -218,11 +218,11 @@ const Button = styled.button`
     }
 
     &:hover::after {
-        background-color: #151515;
+        background-color: ${props => props.theme.almostBlack};
     }
 
     &:hover {
-        background-color: #D5966C;
+        background-color: ${props => props.theme.gold};
     }
 `;
 
@@ -249,7 +249,7 @@ const TitleHalf = styled.div`
     padding-top: 22vh;
 
     ${props => props.leftHalf && `
-        background-color: #151515;
+        background-color: ${props.theme.almostBlack};
         z-index: 2;
         width: 32.9%;
 
@@ -273,7 +273,7 @@ const TitleHalf = styled.div`
 `;
 
 const DesktopTitle = styled.div`
-    font-family: 'Big Shoulders Display', cursive;
+    font-family: ${props => props.theme.fontBold}, cursive;
     font-size: 96px;
     font-weight: 900;
     width: 50vw;
@@ -287,7 +287,7 @@ const DesktopTitle = styled.div`
     }
 
     ${props => props.leftHalf && `
-        color: #fff;
+        color: ${props.theme.white};
     `}
 `;
 
@@ -306,7 +306,7 @@ const DesktopSubtitle = styled.div`
     font-size: 22px;
     font-weight: 300;
     line-height: 33px;
-    font-family: "Outfit", sans-serif;
+    font-family: ${props => props.theme.fontLight}, sans-serif;
     max-width: 350px;
     margin-bottom: 70px;
 `;
