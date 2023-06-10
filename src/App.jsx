@@ -9,6 +9,7 @@ import { ThemeProvider } from "styled-components";
 
 //Importing Routes
 import Homepage from "./routes/Homepage";
+import Location from "./routes/Location";
 
 
 
@@ -30,6 +31,10 @@ const App = () => {
       element: <Homepage />,
       //errorElement: <Error />
     },
+    {
+      path: "/our-location",
+      element: <Location />
+    }
   ])
 
   return (

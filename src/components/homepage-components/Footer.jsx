@@ -5,15 +5,15 @@ import IG from '../../assets/icons/instagram.svg';
 import FB from '../../assets/icons/facebook.svg';
 import TW from '../../assets/icons/twitter.svg';
 
-const Footer = () => {
+const Footer = ({location}) => {
     return (
-        <Container>
-            <Title>
+        <Container location={location}>
+            <Title location={location}>
                 <Word>Modern</Word>
                 <Word>Art Gallery</Word>
             </Title>
 
-            <Subtitle>
+            <Subtitle location={location}>
                 The Modern Art Gallery is free to all
                 visitors and open seven days a week
                 from 8am to 9pm. Find us at 99
@@ -23,14 +23,17 @@ const Footer = () => {
             <Icons>
                 <Icon
                     src={FB}
+                    location={location}
                 />
 
                 <Icon
                     src={IG}
+                    location={location}
                 />
 
                 <Icon
                     src={TW}
+                    location={location}
                 />
             </Icons>
         </Container>
@@ -40,13 +43,12 @@ const Footer = () => {
 export default Footer;
 
 const Container = styled.footer`
-    margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background-color: ${props => props.theme.almostBlack};
-    color: ${props => props.theme.white};
+    background-color: ${props => props.location ? props.theme.gold : props.theme.almostBlack};
+    color: ${props => props.location ? props.theme.almostBlack : props.theme.white};
     padding: 50px 30px;
 
     @media (min-width: 768px) {
@@ -62,15 +64,12 @@ const Container = styled.footer`
 `;
 
 const Title = styled.div`
-    font-size: 40px;
+    font-size: 30px;
     font-weight: black;
     font-family: ${props => props.theme.fontBold};
     margin-bottom: 25px;
     text-transform: uppercase;
-
-    @media (min-width: 768px) {
-        font-size: 30px;
-    }
+    color: ${props => props.location ? props.theme.almostBlack : props.theme.white};
 `;
 
 const Word = styled.div`
@@ -81,7 +80,7 @@ const Subtitle = styled.div`
     font-size: 16px;
     font-weight: light;
     font-family: ${props => props.theme.fontLight};
-    color: ${props => props.theme.white};
+    color: ${props => props.location ? props.theme.almostBlack : props.theme.white};
     opacity: 70%;
     line-height: 26px;
     margin-bottom: 25px;
@@ -106,6 +105,10 @@ const Icon = styled.img`
 
     &:hover {
         cursor: pointer;
-        filter: invert(40%);
+        filter: ${props => props.location ? "grayscale(100%)" : "invert(40%)"};
     }
+
+    ${props => props.location && `
+        filter: invert(100%);
+    `}
 `;

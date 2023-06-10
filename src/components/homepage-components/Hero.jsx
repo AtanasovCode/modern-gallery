@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import coverMobile from '../../assets/images/Rectangle.jpg';
 import coverTablet from '../../assets/images/cover-tablet.jpg';
@@ -29,7 +30,7 @@ const Hero = () => {
                             inspire you? Visit us and find out.
                         </Subtitle>
 
-                        <Button>
+                        <Button to="our-location">
                             Our Location
                         </Button>
                     </InfoContainer>
@@ -67,7 +68,7 @@ const Hero = () => {
                         inspire you? Visit us and find out.
                     </DesktopSubtitle>
 
-                    <DesktopButton>
+                    <DesktopButton to="our-location">
                         Our Location
                     </DesktopButton>
                 </DesktopInfo>
@@ -184,12 +185,18 @@ const Subtitle = styled.div`
     max-width: 343px;
 `;
 
-const Button = styled.button`
+export const Button = styled(Link)`
     background-color: ${props => props.theme.almostBlack};
+    color: ${props => props.theme.white};
     font-size: 20px;
     font-weight: extrabold;
     letter-spacing: 3.64px;
     text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     border: none;
     color: ${props => props.theme.white};
     width: 204px;
@@ -205,18 +212,18 @@ const Button = styled.button`
     }
 
     &::after {
-        content: url(${Arrow});
-        position: absolute;
-        width: 25%;
-        height: 100%;
-        background-color: ${props => props.theme.gold};
-        top: 0;
-        right: -25%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all .4s ease;
-    }
+            content: url(${Arrow});
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            background-color: ${props => props.theme.gold};
+            top: 0;
+            right: -25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .4s ease;
+        }
 
     &:hover::after {
         background-color: ${props => props.theme.almostBlack};

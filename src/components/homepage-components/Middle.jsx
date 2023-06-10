@@ -62,6 +62,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 80px;
+    margin-bottom: 35px;
     padding: 10px 20px;
     padding-bottom: 80px;
 
@@ -71,11 +72,13 @@ const Container = styled.div`
 
     @media (min-width: 768px) {
         padding: 10px 5vw;
+        margin-bottom: 50px;
     }
 
     @media (min-width: 1024px) {
         padding: 10px 14vw;
         margin-top: 140px;
+        margin-bottom: 80px;
     }
 `;
 
@@ -151,6 +154,7 @@ const ArtDisplaySection = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 720px;
 
     @media (min-width: 768px) {
         display: grid;
@@ -168,7 +172,7 @@ const ArtOne = styled.img`
         grid-column: 1;
         grid-row: span 2;
         height: 100%;
-        max-height: 700px;
+        max-height: 720px;
     }
 `;
 
