@@ -84,6 +84,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-bottom: 80px;
 
     //Tablet Design
 
@@ -98,7 +99,7 @@ const Container = styled.div`
 
 const MobileView = styled.div`
     width: 100%;
-    height: 100%;
+    height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;

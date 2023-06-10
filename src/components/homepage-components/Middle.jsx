@@ -26,29 +26,30 @@ const Middle = () => {
                     </Subtitle>
                 </Info>
 
-                <ArtDisplaySection>
-                    <ArtOne 
-                        src={artImg1}
-                        alt="Art display"
-                    />
-
-                    <ArtTwo 
-                        src={artImg2}
-                        alt="Art display"
-                    />
-
-                    <InfoBox>
-                        <InfoBoxTitle>
-                            Come & be inspired
-                        </InfoBoxTitle>
-
-                        We’re excited to welcome you to our 
-                        gallery and see how our collections 
-                        influence you.
-                    </InfoBox>
-                </ArtDisplaySection>
             </FirstSection>
-        </Container>
+
+            <ArtDisplaySection>
+                <ArtOne
+                    src={artImg1}
+                    alt="Art display"
+                />
+
+                <ArtTwo
+                    src={artImg2}
+                    alt="Art display"
+                />
+
+                <InfoBox>
+                    <InfoBoxTitle>
+                        Come & be inspired
+                    </InfoBoxTitle>
+
+                    We’re excited to welcome you to our
+                    gallery and see how our collections
+                    influence you.
+                </InfoBox>
+            </ArtDisplaySection>
+        </Container >
     );
 };
 
@@ -57,11 +58,25 @@ export default Middle;
 
 const Container = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 80px;
     padding: 10px 20px;
     padding-bottom: 80px;
+
+    @media (min-width: 450px) {
+        padding: 10px 12vw;
+    }
+
+    @media (min-width: 768px) {
+        padding: 10px 5vw;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 10px 14vw;
+        margin-top: 140px;
+    }
 `;
 
 const FirstSection = styled.div`
@@ -70,6 +85,11 @@ const FirstSection = styled.div`
     align-items: flex-start;
     justify-content: center;
     width: 100%;
+
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+        align-items: stretch;
+    }
 `;
 
 const ImageHeader = styled.div`
@@ -80,6 +100,10 @@ const ImageHeader = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 30px;
+
+    @media (min-width: 1024px) {
+        max-width: 600px;
+    }
 `;
 
 
@@ -87,6 +111,16 @@ const Info = styled.div`
     display: flex;
     flex-direction: column;
     margin-bottom: 45px;
+
+    @media (min-width: 768px) {
+        align-items: flex-start;
+        margin-right: 45px;
+    }
+
+    @media (min-width: 1024px) {
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 const Title = styled.div`
@@ -96,7 +130,11 @@ const Title = styled.div`
     line-height: 45px;
     color: ${props => props.theme.almostBlack};
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+        max-width: 250px;
+    }
 `;
 
 const Subtitle = styled.div`
@@ -105,7 +143,7 @@ const Subtitle = styled.div`
     line-height: 28px;
     font-family: ${props => props.theme.fontLight}, "sans-serif";
     color: ${props => props.theme.darkGray};
-    max-width: 323px;
+    max-width: 332px;
 `;
 
 const ArtDisplaySection = styled.div`
@@ -113,16 +151,36 @@ const ArtDisplaySection = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        align-items: stretch;
+        grid-gap: 10px;
+    }
 `;
 
 const ArtOne = styled.img`
     width: 100%;
     margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+        grid-column: 1;
+        grid-row: span 2;
+        height: 100%;
+        max-height: 700px;
+    }
 `;
 
 const ArtTwo = styled.img`
     width: 100%;
     margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+        grid-column: 2;
+        grid-row: 1;
+        margin-bottom: 0;
+    }
 `;
 
 const InfoBox = styled.div`
@@ -132,6 +190,19 @@ const InfoBox = styled.div`
     color: ${props => props.theme.white};
     font-family: ${props => props.theme.fontLight}, "sans-serif";
     padding: 50px 20px;
+
+    @media (min-width: 768px) {
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 70px 40px;
+    }
 `;
 
 const InfoBoxTitle = styled.div`
