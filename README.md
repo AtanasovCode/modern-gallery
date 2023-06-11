@@ -15,4 +15,4 @@ Project by [frontendmentor](https://www.frontendmentor.io/home) created by [atan
 
 # Live Demo
 
-[Modern Art Gallery](https://modern-gallery-fm.netlify.app/)
+[Modern Art Gallery](https://modern-gallery-art.netlify.app/)
