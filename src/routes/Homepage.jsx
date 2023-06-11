@@ -18,4 +18,6 @@ const Homepage = () => {
 export default Homepage;
 
 const Container = styled.div`
+    display: flex;
+    flex-direction: column;
 `;

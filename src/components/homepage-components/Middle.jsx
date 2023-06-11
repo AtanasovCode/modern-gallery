@@ -64,9 +64,9 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 80px;
-    margin-bottom: 160px;
     padding: 10px 20px;
     padding-bottom: 80px;
+    overflow-y: hidden;
 
     @media (min-width: 450px) {
         padding: 10px 12vw;
@@ -74,12 +74,11 @@ const Container = styled.div`
 
     @media (min-width: 768px) {
         padding: 10px 5vw;
-        margin-bottom: 50px;
-    }
+\    }
 
     @media (min-width: 1024px) {
         padding: 10px 12vw;
-        margin: 170px 0;
+        margin-top: 170px;
     }
 `;
 
@@ -177,13 +176,18 @@ const ArtDisplaySection = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-height: 720px;
+    margin-bottom: 60px;
 
     @media (min-width: 768px) {
         display: grid;
         grid-template-columns: 1.6fr 1fr;
         align-items: stretch;
         grid-gap: 30px;
+        margin-bottom: 120px;
+    }
+
+    @media (min-width: 1024px) {
+        margin-bottom: 170px;
     }
 `;
 
@@ -221,10 +225,11 @@ const InfoBox = styled.div`
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 30px;
     }
 
     @media (min-width: 1024px) {
-        padding: 10px;
+        padding: 30px;
     }
 `;
 
