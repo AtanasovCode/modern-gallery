@@ -44,9 +44,11 @@ const Middle = () => {
                         Come & be inspired
                     </InfoBoxTitle>
 
-                    We’re excited to welcome you to our
-                    gallery and see how our collections
-                    influence you.
+                    <InfoBoxDesc>
+                        We’re excited to welcome you to our
+                        gallery and see how our collections
+                        influence you.
+                    </InfoBoxDesc>
                 </InfoBox>
             </ArtDisplaySection>
         </Container >
@@ -62,7 +64,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 80px;
-    margin-bottom: 35px;
+    margin-bottom: 160px;
     padding: 10px 20px;
     padding-bottom: 80px;
 
@@ -76,9 +78,8 @@ const Container = styled.div`
     }
 
     @media (min-width: 1024px) {
-        padding: 10px 14vw;
-        margin-top: 140px;
-        margin-bottom: 80px;
+        padding: 10px 12vw;
+        margin: 170px 0;
     }
 `;
 
@@ -104,8 +105,17 @@ const ImageHeader = styled.div`
     background-position: center;
     margin-bottom: 30px;
 
+    @media (min-width: 376px) {
+        height: 320px;
+    }
+
+    @media (min-width: 768px) {
+        height: 400px;
+    }
+
     @media (min-width: 1024px) {
-        max-width: 600px;
+        max-width: 635px;
+        height: 400px;
     }
 `;
 
@@ -123,6 +133,7 @@ const Info = styled.div`
     @media (min-width: 1024px) {
         align-items: center;
         justify-content: center;
+        margin-right: 120px;
     }
 `;
 
@@ -138,6 +149,12 @@ const Title = styled.div`
     @media (min-width: 768px) {
         max-width: 250px;
     }
+
+    @media (min-width: 1024px) {
+        font-size: 60px;
+        line-height: 60px;
+        max-width: 320px;
+    }
 `;
 
 const Subtitle = styled.div`
@@ -147,6 +164,12 @@ const Subtitle = styled.div`
     font-family: ${props => props.theme.fontLight}, "sans-serif";
     color: ${props => props.theme.darkGray};
     max-width: 332px;
+
+    @media (min-width: 1024px) {
+        font-size: 22px;
+        line-height: 32px;
+        max-width: 350px;
+    }
 `;
 
 const ArtDisplaySection = styled.div`
@@ -154,13 +177,13 @@ const ArtDisplaySection = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 720px;
+    max-height: 720px;
 
     @media (min-width: 768px) {
         display: grid;
-        grid-template-columns: 1.7fr 1fr;
+        grid-template-columns: 1.6fr 1fr;
         align-items: stretch;
-        grid-gap: 10px;
+        grid-gap: 30px;
     }
 `;
 
@@ -172,7 +195,6 @@ const ArtOne = styled.img`
         grid-column: 1;
         grid-row: span 2;
         height: 100%;
-        max-height: 720px;
     }
 `;
 
@@ -189,11 +211,8 @@ const ArtTwo = styled.img`
 
 const InfoBox = styled.div`
     background-color: ${props => props.theme.almostBlack};
-    font-size: 18px;
-    font-weight: light;
-    color: ${props => props.theme.white};
-    font-family: ${props => props.theme.fontLight}, "sans-serif";
     padding: 50px 20px;
+    color: ${props => props.theme.white};
 
     @media (min-width: 768px) {
         grid-column: 2;
@@ -205,7 +224,7 @@ const InfoBox = styled.div`
     }
 
     @media (min-width: 1024px) {
-        padding: 70px 40px;
+        padding: 10px;
     }
 `;
 
@@ -215,4 +234,21 @@ const InfoBoxTitle = styled.div`
     font-family: ${props => props.theme.fontBold}, "cursive";
     text-transform: uppercase;
     margin-bottom: 20px;
+
+    @media (min-width: 1024px) {
+        font-size: 60px;
+        line-height: 60px;
+    }
+`;
+
+const InfoBoxDesc = styled.div`
+    font-size: 18px;
+    font-weight: light;
+    font-family: ${props => props.theme.fontLight}, "sans-serif";
+
+    @media (min-width: 1024px) {
+        font-size: 22px;
+        line-height: 32px;
+        max-width: 350px;
+    }
 `;

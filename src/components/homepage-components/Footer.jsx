@@ -23,16 +23,19 @@ const Footer = ({location}) => {
             <Icons>
                 <Icon
                     src={FB}
+                    alt="facebook logo"
                     location={location}
                 />
 
                 <Icon
                     src={IG}
+                    alt="instagram logo"
                     location={location}
                 />
 
                 <Icon
                     src={TW}
+                    alt="twitter logo"
                     location={location}
                 />
             </Icons>

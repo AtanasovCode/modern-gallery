@@ -104,7 +104,7 @@ const MobileView = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
 
     @media (min-width: 768px) {
@@ -254,12 +254,12 @@ const TitleHalf = styled.div`
     height: 799px;
     overflow: hidden;
     position: absolute;
-    padding-top: 22vh;
+    padding-top: 21.5vh;
 
     ${props => props.leftHalf && `
         background-color: ${props.theme.almostBlack};
         z-index: 2;
-        width: 32.9%;
+        width: 32.4%;
 
         @media (max-width: 1240px) {
             width: 22%;
@@ -285,7 +285,7 @@ const DesktopTitle = styled.div`
     font-size: 96px;
     font-weight: 900;
     width: 50vw;
-    margin-left: 13vw;
+    margin-left: 12.5vw;
     color: #000;
     text-transform: uppercase;
     line-height: 88px;
@@ -306,7 +306,7 @@ const DesktopInfo = styled.div`
     justify-content: center;
     z-index: 99;
     position: absolute;
-    top: 22vh;
+    top: 21.5vh;
     right:10.8vw;
 `;
 
