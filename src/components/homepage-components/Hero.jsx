@@ -243,7 +243,6 @@ const DesktopView = styled.div`
         align-items: center;
         justify-content: flex-start;
         width: 100%;
-        max-width: 1440px;
         height: 799px;
         position: relative;
         overflow-x: hidden;
@@ -259,11 +258,8 @@ const TitleHalf = styled.div`
     ${props => props.leftHalf && `
         background-color: ${props.theme.almostBlack};
         z-index: 2;
-        width: 32.4%;
+        width: 32%;
 
-        @media (max-width: 1240px) {
-            width: 22%;
-        }
     `}
 
     ${props => props.rightHalf && `
@@ -274,9 +270,6 @@ const TitleHalf = styled.div`
         background-repeat: no-repeat;
         background-position: 32vw 0;
 
-        @media (max-width: 1240px) {
-            background-position: 21vw 0;
-        }
     `}
 `;
 
@@ -285,14 +278,10 @@ const DesktopTitle = styled.div`
     font-size: 96px;
     font-weight: 900;
     width: 50vw;
-    margin-left: 12.5vw;
+    margin-left: 12vw;
     color: #000;
     text-transform: uppercase;
     line-height: 88px;
-
-    @media (max-width: 1240px) {
-        margin-left: 4vw;
-    }
 
     ${props => props.leftHalf && `
         color: ${props.theme.white};
